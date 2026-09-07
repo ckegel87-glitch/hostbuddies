@@ -71,6 +71,21 @@ Bei anderen Ist-Werten in `index.html` und `ueber-uns.html` anpassen.
 
 ## Veröffentlichen
 
-Der Ordner wird komplett zu einem Hoster für statische Seiten hochgeladen
-(GitHub Pages, Cloudflare Pages oder ähnlich). Danach beim Domain-Anbieter
-hostbuddies.eu auf den neuen Hoster umstellen. Bis dahin bleibt Jimdo online.
+Der Ordner ist ein Git-Repository und liegt auf GitHub unter
+<https://github.com/ckegel87-glitch/hostbuddies> (öffentlich, weil GitHub
+Pages im Gratis-Tarif das verlangt). GitHub Pages liefert den Stand von
+`main` unter <https://ckegel87-glitch.github.io/hostbuddies/> aus.
+
+Jede Änderung geht so live:
+
+```bash
+git add -A && git commit -m "..." && git push
+```
+
+Nach dem Push dauert es etwa eine Minute.
+
+Domain hostbuddies.eu zeigt noch auf Jimdo. Umstellung: Datei `CNAME` mit
+Inhalt `hostbuddies.eu` ins Repo, beim Domain-Anbieter einen A-Record auf
+die GitHub-Pages-Adressen (185.199.108.153 bis .111.153) und `www` als
+CNAME auf `ckegel87-glitch.github.io`, dann in den Repo-Einstellungen unter
+Pages die Domain eintragen und HTTPS erzwingen.
