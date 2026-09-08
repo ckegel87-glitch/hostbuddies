@@ -84,8 +84,12 @@ git add -A && git commit -m "..." && git push
 
 Nach dem Push dauert es etwa eine Minute.
 
-Domain hostbuddies.eu zeigt noch auf Jimdo. Umstellung: Datei `CNAME` mit
-Inhalt `hostbuddies.eu` ins Repo, beim Domain-Anbieter einen A-Record auf
-die GitHub-Pages-Adressen (185.199.108.153 bis .111.153) und `www` als
-CNAME auf `ckegel87-glitch.github.io`, dann in den Repo-Einstellungen unter
-Pages die Domain eintragen und HTTPS erzwingen.
+Domain hostbuddies.eu liegt seit 08.09.2026 bei united-domains (Kunden-Nr.
+1384955). DNS dort: vier A-Records auf die GitHub-Pages-Adressen
+(185.199.108.153 bis .111.153), Wildcard ebenso, `www` als CNAME auf
+`ckegel87-glitch.github.io`. Bei GitHub Pages ist hostbuddies.eu als
+Custom Domain eingetragen (Datei `CNAME` im Repo, von GitHub angelegt).
+HTTPS erzwingen, sobald GitHub das Zertifikat ausgestellt hat.
+
+Jimdo-Paket Grow kann gekündigt werden, sobald hostbuddies.eu die neue
+Seite zeigt.
