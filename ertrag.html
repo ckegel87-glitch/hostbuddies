@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ertrag schätzen – Hostbuddies</title>
+<meta name="description" content="Was bringt deine Wohnung in Wien oder Berlin als Ferienwohnung? Kostenlose Ertragsschätzung von Hostbuddies innerhalb von 48 Stunden.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/logo-512.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Landingpage fuer Anzeigen: kein Menue, ein Ziel */
+  .kopf .nav { display: none; }
+  .kopf .burger { display: none; }
+  .lp-hero { padding: clamp(2rem, 6vw, 4rem) 0; }
+  .lp-hero .container { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; }
+  @media (max-width: 860px) { .lp-hero .container { grid-template-columns: 1fr; } }
+  .lp-punkte { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+  .lp-punkte li { display: flex; gap: 0.8rem; align-items: flex-start; margin-bottom: 0.9rem; color: var(--text-hell); }
+  .lp-punkte strong { color: #212121; display: block; }
+  .formular .zweier { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+  .formular select { display: block; width: 100%; margin-top: 0.35rem; padding: 0.65rem 0.8rem; font: inherit; font-weight: 400; border: 1px solid #cfd6da; border-radius: 8px; background: var(--weiss); color: var(--text); }
+  .klein-hinweis { font-size: 0.8rem; color: var(--text-hell); margin-top: 0.8rem; }
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="Hostbuddies Startseite">
+      <img src="img/logo-512.jpg" alt="" width="36" height="36">
+      hostbuddies
+    </a>
+    <a class="btn btn-outline" href="tel:+436763865149">+43 676 386 51 49</a>
+  </div>
+</header>
+
+<main>
+
+<section class="lp-hero">
+  <div class="container">
+    <div>
+      <span class="kicker" style="display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blau);margin-bottom:0.5rem;">Kostenlos und unverbindlich</span>
+      <h1>Was bringt deine Wohnung als Ferienwohnung?</h1>
+      <p class="lead" style="color: var(--text-hell); font-size: 1.05rem;">Sag uns Stadt, Größe und Zimmer. Wir schätzen innerhalb von 48 Stunden, was deine Wohnung in Wien oder Berlin bei Kurzzeitvermietung bringen kann, und sagen dir ehrlich, ob sie überhaupt darf.</p>
+      <ul class="lp-punkte">
+        <li><span class="haken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><strong>20 % Provision, sonst nichts</strong>Keine Grundgebühr, keine Mindestlaufzeit, monatlich kündbar.</div></li>
+        <li><span class="haken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><strong>Wir betreiben selbst 55 Apartments</strong>Wien und Berlin, 12.000 Gäste im Jahr, 4,91 Sterne auf Airbnb.</div></li>
+        <li><span class="haken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><strong>Alles aus einer Hand</strong>Inserat, Dynamic Pricing, Gäste 24/7, Reinigung, Meldewesen, Abrechnung.</div></li>
+      </ul>
+      <div class="zitate" style="margin-top: 2rem;">
+        <blockquote class="kachel" style="margin:0;"><span class="sterne"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></span><p>„Die Kommunikation mit den Gastgebern war ausgezeichnet … die Gastgeber kamen, um das Problem buchstäblich innerhalb von 10 Minuten zu lösen.“</p><cite>Roberta, Gast auf Airbnb · Wien, Dezember 2025</cite></blockquote>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Ertrag schätzen lassen</h3>
+      <p class="unter">Dauert eine Minute. Antwort innerhalb von 48 Stunden.</p>
+      <form class="formular" action="mailto:hostbuddies@cityswap.eu?subject=Ertragssch%C3%A4tzung" method="get" enctype="text/plain">
+        <div class="zweier">
+          <label>Stadt
+            <select name="stadt" required>
+              <option value="">Bitte wählen</option>
+              <option>Wien</option>
+              <option>Berlin</option>
+              <option>Andere</option>
+            </select>
+          </label>
+          <label>Zimmer
+            <select name="zimmer" required>
+              <option value="">Bitte wählen</option>
+              <option>Studio</option>
+              <option>2 Zimmer</option>
+              <option>3 Zimmer</option>
+              <option>4 Zimmer oder mehr</option>
+            </select>
+          </label>
+        </div>
+        <div class="zweier">
+          <label>Größe in m²<input type="number" name="qm" min="10" max="500" inputmode="numeric"></label>
+          <label>Bezirk oder PLZ<input type="text" name="lage"></label>
+        </div>
+        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+        <label>E-Mail<input type="email" name="email" autocomplete="email" required></label>
+        <label>Telefon (freiwillig)<input type="tel" name="telefon" autocomplete="tel"></label>
+        <button class="btn" type="submit" style="width:100%;justify-content:center;">Schätzung anfordern</button>
+        <p class="klein-hinweis">Das Formular öffnet dein Mailprogramm mit den Angaben. Deine Daten nutzen wir nur für die Schätzung, siehe <a href="datenschutz.html">Datenschutz</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt-grau zentriert">
+  <div class="container">
+    <h2>So geht es nach deiner Anfrage weiter</h2>
+    <div class="raster raster-3 schritte" style="text-align: left; margin-top: 3rem;">
+      <div class="kachel"><h3>Wir rechnen</h3><p>Lage, Größe und Ausstattung gegen echte Buchungsdaten vergleichbarer Wohnungen. Dazu prüfen wir, ob Widmung oder Genehmigung passen.</p></div>
+      <div class="kachel"><h3>Du bekommst Zahlen</h3><p>Erwartbarer Umsatz, unsere Provision, dein Ertrag. Schriftlich, innerhalb von 48 Stunden, ohne Verpflichtung.</p></div>
+      <div class="kachel"><h3>Du entscheidest</h3><p>Passt es, vereinbaren wir eine Besichtigung und legen los. Passt es nicht, sagen wir das genauso klar.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="fuss">
+  <div class="container">
+    <div>
+      <a class="logo" href="index.html">
+        <img src="img/logo-512.jpg" alt="" width="36" height="36">
+        hostbuddies
+      </a>
+      <p>Ein Service der Cityswap Austria GmbH (FN 611536 v, Handelsgericht Wien) und der CitySwap Germany GmbH, Berlin.</p>
+      <p>Linke Wienzeile 56, 1060 Wien<br>Urbanstraße 71, 10967 Berlin<br><a href="tel:+436763865149">+43 676 386 51 49</a></p>
+    </div>
+    <div>
+      <h4>Seiten</h4>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="mailto:hostbuddies@cityswap.eu">hostbuddies@cityswap.eu</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+    <div class="klein">© 2026 Cityswap Austria GmbH. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
