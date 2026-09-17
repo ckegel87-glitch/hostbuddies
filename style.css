@@ -87,6 +87,11 @@ p { margin: 0 0 1em; }
 
 .btn svg { width: 14px; height: 14px; }
 
+.btn.wa { background: #25d366; border-color: #25d366; color: #fff; width: 100%; justify-content: center; font-size: 0.95rem; padding: 0.85rem 1.4rem; }
+.btn.wa:hover { background: #1ebe5b; border-color: #1ebe5b; }
+.btn.wa svg { width: 18px; height: 18px; }
+.klein-hinweis { font-size: 0.8rem; color: var(--text-hell); margin-top: 0.8rem; }
+
 /* ---------- Kopfzeile ---------- */
 
 .kopf {
