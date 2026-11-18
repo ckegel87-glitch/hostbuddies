@@ -459,6 +459,7 @@ p { margin: 0 0 1em; }
 }
 .band-foto .container { position: relative; }
 .kachel-bild {
+  height: auto;
   width: calc(100% + 3rem);
   margin: -1.6rem -1.5rem 1.2rem;
   aspect-ratio: 16 / 9;
@@ -466,6 +467,7 @@ p { margin: 0 0 1em; }
   border-radius: var(--radius) var(--radius) 0 0;
 }
 .galerie img {
+  height: auto;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -548,6 +550,7 @@ p { margin: 0 0 1em; }
 }
 .wechsel + .wechsel { margin-top: clamp(3rem, 6vw, 5rem); }
 .wechsel img {
+  height: auto;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
