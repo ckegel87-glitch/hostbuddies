@@ -39,12 +39,13 @@ document.querySelectorAll('form[action^="mailto:"]').forEach(function (form) {
     event.preventDefault();
     var target = new URL(form.action);
     var subject = target.searchParams.get('subject') || 'Anfrage über Hostbuddies';
+    var namen = { name: 'Name', email: 'E-Mail', qm: 'Größe in m²', lage: 'Bezirk oder PLZ' };
     var felder = {};
     var lines = [];
     new FormData(form).forEach(function (value, key) {
       if (key === 'botcheck' || !String(value).trim()) return;
       felder[key] = value;
-      lines.push(key + ': ' + value);
+      lines.push((namen[key] || key.charAt(0).toUpperCase() + key.slice(1)) + ': ' + value);
     });
     function mailprogramm() {
       window.location.href = target.protocol + target.pathname + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n\n'));
