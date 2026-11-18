@@ -9,6 +9,7 @@
       var offen = !nav.hidden;
       nav.hidden = offen;
       burger.setAttribute("aria-expanded", String(!offen));
+      burger.setAttribute("aria-label", offen ? "Menü öffnen" : "Menü schließen");
     });
     // Auf breiten Bildschirmen ist das Menue immer sichtbar; das hidden-Attribut
     // greift nur, wenn die Kopfzeile in den Burger-Modus faellt.
@@ -16,6 +17,7 @@
     function anpassen() {
       nav.hidden = mq.matches;
       burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Menü öffnen");
     }
     mq.addEventListener("change", anpassen);
     anpassen();
@@ -47,6 +49,7 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && button && menu && window.matchMedia('(max-width: 860px)').matches && !menu.hidden) {
     menu.hidden = true;
     button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Menü öffnen');
     button.focus();
   }
 });
