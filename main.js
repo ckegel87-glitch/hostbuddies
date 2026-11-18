@@ -27,3 +27,26 @@
     if (ziel === hier) a.setAttribute("aria-current", "page");
   });
 })();
+
+// Preserve all fields when preparing an email; sending remains in the user's mail app.
+document.querySelectorAll('form[action^="mailto:"]').forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var target = new URL(form.action);
+    var lines = [];
+    new FormData(form).forEach(function (value, key) {
+      if (String(value).trim()) lines.push(key + ': ' + value);
+    });
+    var subject = target.searchParams.get('subject') || 'Anfrage über Hostbuddies';
+    window.location.href = target.protocol + target.pathname + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n\n'));
+  });
+});
+document.addEventListener('keydown', function (event) {
+  var button = document.querySelector('.burger');
+  var menu = document.querySelector('.nav');
+  if (event.key === 'Escape' && button && menu && window.matchMedia('(max-width: 860px)').matches && !menu.hidden) {
+    menu.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+    button.focus();
+  }
+});

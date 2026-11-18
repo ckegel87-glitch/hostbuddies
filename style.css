@@ -639,3 +639,14 @@ a.inserat p { color: var(--blau); font-weight: 600; font-size: 0.9rem; }
 .zusagen .kachel h3 { font-size: 1.05rem; }
 .vorteile.nein .haken { background: #c94f4f; }
 .fuss p a { color: var(--weiss); }
+
+/* Keyboard access and motion preferences */
+.skip-link { position: fixed; top: -100px; left: 1rem; z-index: 100; background: #fff; color: #015d7a; padding: 1rem; border: 2px solid currentColor; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: 3px solid #015d7a; outline-offset: 4px; }
+main, section[id] { scroll-margin-top: 6rem; }
+.btn.wa { color: #123522; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
