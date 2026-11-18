@@ -65,10 +65,10 @@ funktionieren auch ohne Server.
 
 ## Kennzahlen
 
-Die Zahlen auf Startseite und Über uns sind Schätzungen aus 55 Apartments,
-3,5 Betten im Schnitt, 75 % Auslastung, 2,5 Gästen pro belegter Nacht und
-3 Nächten Aufenthalt: rund 15.000 Apartment-Nächte, 37.500 Übernachtungen,
-12.500 Gäste pro Jahr. Auf der Seite stehen 12.000+ Gäste und 30.000+ Übernachtungen, dazu 24/7.
+Die Zahlen auf Startseite und Über uns sind Schätzungen aus 72 Apartments,
+75 % Auslastung, 2,5 Gästen pro belegter Nacht und 3 Nächten Aufenthalt:
+rund 19.700 Apartment-Nächte, 49.000 Übernachtungen, 16.400 Gäste pro Jahr.
+Auf der Seite stehen vorsichtig gerundet 16.000+ Gäste und 40.000+ Übernachtungen, dazu 24/7.
 Bei anderen Ist-Werten in `index.html` und `ueber-uns.html` anpassen.
 
 ## Veröffentlichen
