@@ -34,6 +34,7 @@
       <a href="service.html">Service</a>
       <a href="features.html">Features <span class="neu">Neu</span></a>
       <a href="pricing.html">Pricing</a>
+      <a href="potenzialanalyse.html">Potenzialanalyse</a>
       <a href="ueber-uns.html">Über uns</a>
       <a href="galerie.html">Galerie</a>
       <a href="kontakt.html">Kontakt</a>
@@ -63,13 +64,86 @@
     </div>
   </div>
   <div class="box">
-    <h3>Nachricht schreiben</h3>
-    <p class="unter">Das Formular öffnet dein Mailprogramm mit einer vorbereiteten Nachricht.</p>
-    <form class="formular" action="mailto:hostbuddies@cityswap.eu" method="get" enctype="text/plain">
-      <label>Name<input type="text" name="name" autocomplete="name"></label>
+    <h3>Wohnung anfragen</h3>
+    <p class="unter">Je mehr wir über die Wohnung wissen, desto genauer wird unsere Antwort. Pflicht sind nur Name und E-Mail.</p>
+    <form class="formular" action="mailto:hostbuddies@cityswap.eu?subject=Anfrage%20Wohnung" method="get" enctype="text/plain">
+      <div class="zweier">
+        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Telefon<input type="tel" name="Telefon" autocomplete="tel"></label>
+      </div>
       <label>E-Mail<input type="email" name="email" autocomplete="email" required></label>
-      <label>Nachricht<textarea name="body" rows="6" required></textarea></label>
-      <button class="btn" type="submit">E-Mail vorbereiten</button>
+      <label>Ich bin
+        <select name="Ich bin">
+          <option value="">Bitte wählen</option>
+          <option>Eigentümer</option>
+          <option>Mieter</option>
+          <option>Hausverwaltung oder Makler</option>
+        </select>
+      </label>
+
+      <h4 class="formular-teil">Die Wohnung</h4>
+      <label>Adresse<input type="text" name="Adresse" autocomplete="street-address" placeholder="Straße und Hausnummer"></label>
+      <div class="zweier">
+        <label>Postleitzahl<input type="text" name="PLZ" inputmode="numeric" autocomplete="postal-code" maxlength="5"></label>
+        <label>Ort<input type="text" name="Ort" autocomplete="address-level2" placeholder="Wien, Berlin …"></label>
+      </div>
+      <div class="zweier">
+        <label>Größe in m²<input type="number" name="Größe in m²" min="10" max="500" inputmode="numeric"></label>
+        <label>Zimmer
+          <select name="Zimmer">
+            <option value="">Bitte wählen</option>
+            <option>Studio / 1 Zimmer</option>
+            <option>2 Zimmer</option>
+            <option>3 Zimmer</option>
+            <option>4 Zimmer oder mehr</option>
+          </select>
+        </label>
+      </div>
+      <div class="zweier">
+        <label>Lage im Gebäude
+          <select name="Lage im Gebäude">
+            <option value="">Bitte wählen</option>
+            <option>Souterrain</option>
+            <option>Erdgeschoss</option>
+            <option>1. oder 2. Stock</option>
+            <option>3. Stock oder höher</option>
+            <option>Dachgeschoss</option>
+          </select>
+        </label>
+        <label>Lift
+          <select name="Lift">
+            <option value="">Bitte wählen</option>
+            <option>Ja</option>
+            <option>Nein</option>
+          </select>
+        </label>
+      </div>
+      <label>Baurechtliche Widmung oder Genehmigung
+        <select name="Widmung">
+          <option value="">Bitte wählen</option>
+          <option>Wohnung (Wohnwidmung)</option>
+          <option>Geschäftslokal, Büro oder Gewerbe</option>
+          <option>Beherbergung oder Ferienwohnung genehmigt</option>
+          <option>Weiß ich nicht</option>
+        </select>
+        <small>Entscheidet, ob Kurzzeitvermietung erlaubt ist. Wenn du es nicht weißt, klären wir das.</small>
+      </label>
+      <div class="zweier">
+        <label>Ausstattung
+          <select name="Ausstattung">
+            <option value="">Bitte wählen</option>
+            <option>Unmöbliert</option>
+            <option>Einfach</option>
+            <option>Mittel</option>
+            <option>Hochwertig</option>
+          </select>
+        </label>
+        <label>Verfügbar ab<input type="text" name="Verfügbar ab" placeholder="z. B. sofort, März 2027"></label>
+      </div>
+      <label>Nachricht (freiwillig)<textarea name="Nachricht" rows="4"></textarea></label>
+      <input type="checkbox" name="botcheck" class="honig" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Anfrage senden</button>
+      <p class="klein-hinweis">Deine Angaben nutzen wir nur zur Bearbeitung der Anfrage, siehe <a href="datenschutz.html">Datenschutz</a>.</p>
     </form>
   </div>
 </div></div></section>
@@ -91,6 +165,7 @@
         <li><a href="service.html">Service</a></li>
         <li><a href="features.html">Features</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="potenzialanalyse.html">Potenzialanalyse</a></li>
         <li><a href="ueber-uns.html">Über uns</a></li>
         <li><a href="galerie.html">Galerie</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>

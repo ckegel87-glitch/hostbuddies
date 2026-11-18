@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potenzialanalyse: Was bringt deine Ferienwohnung? | Hostbuddies</title>
+<meta name="description" content="Umsatzpotenzial deiner Wohnung als Ferienwohnung in Wien oder Berlin berechnen: Postleitzahl, Größe und Ausstattung eingeben, Schätzung sofort sehen.">
+<link rel="icon" href="img/logo-512.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://hostbuddies.eu/potenzialanalyse.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Hostbuddies">
+<meta property="og:title" content="Potenzialanalyse: Was bringt deine Ferienwohnung? | Hostbuddies">
+<meta property="og:description" content="Umsatzpotenzial deiner Wohnung als Ferienwohnung in Wien oder Berlin berechnen: Postleitzahl, Größe und Ausstattung eingeben, Schätzung sofort sehen.">
+<meta property="og:url" content="https://hostbuddies.eu/potenzialanalyse.html">
+<meta property="og:image" content="https://hostbuddies.eu/img/gewoelbe-fresko.jpg">
+<meta property="og:image:alt" content="Apartment mit Gewölbedecke – Hostbuddies">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="Hostbuddies Startseite">
+      <img src="img/logo-512-96.webp" alt="" width="36" height="36" decoding="async">
+      hostbuddies
+    </a>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menue">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="menue" aria-label="Hauptmenü">
+      <a href="service.html">Service</a>
+      <a href="features.html">Features <span class="neu">Neu</span></a>
+      <a href="pricing.html">Pricing</a>
+      <a href="potenzialanalyse.html">Potenzialanalyse</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="btn" href="kontakt.html">Jetzt starten</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+<section class="seitenkopf">
+  <div class="container">
+    <h1>Was kann deine Wohnung als Ferienwohnung umsetzen?</h1>
+    <p>Drei Angaben, eine Zahl. Die Schätzung beruht auf den Buchungsdaten unserer eigenen Apartments in Wien und Berlin.</p>
+  </div>
+</section>
+
+<section class="abschnitt"><div class="container"><div class="kontakt-raster">
+  <div class="box">
+    <h3>Potenzial berechnen</h3>
+    <p class="unter">Kostenlos, ohne Anmeldung. Das Ergebnis erscheint sofort.</p>
+    <form class="formular" id="rechner">
+      <label>Adresse der Wohnung (freiwillig)<input type="text" name="adresse" autocomplete="street-address" placeholder="Straße und Hausnummer"></label>
+      <div class="zweier">
+        <label>Postleitzahl<input type="text" name="plz" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{4,5}" maxlength="5" required></label>
+        <label>Größe in m²<input type="number" name="qm" min="15" max="300" inputmode="numeric" required></label>
+      </div>
+      <fieldset class="stufen">
+        <legend>Ausstattung</legend>
+        <label><input type="radio" name="ausstattung" value="einfach" required><span><strong>Einfach</strong>Zweckmäßig möbliert, ältere Küche oder älteres Bad</span></label>
+        <label><input type="radio" name="ausstattung" value="mittel" checked><span><strong>Mittel</strong>Gepflegt und zeitgemäß, vollständig ausgestattet</span></label>
+        <label><input type="radio" name="ausstattung" value="hochwertig"><span><strong>Hochwertig</strong>Neu saniert, Designmöbel, Extras wie Klimaanlage oder Balkon</span></label>
+      </fieldset>
+      <button class="btn" type="submit">Potenzial berechnen</button>
+    </form>
+  </div>
+
+  <div>
+    <div class="box ergebnis" id="ergebnis" aria-live="polite" hidden></div>
+    <div class="box" id="anfrage-box">
+      <h3>Genaue Schätzung anfordern</h3>
+      <p class="unter">Wir rechnen deine Wohnung einzeln durch und prüfen, ob sie vermietet werden darf. Antwort innerhalb von 48 Stunden, ohne Verpflichtung.</p>
+      <form class="formular" id="anfrage" action="mailto:hostbuddies@cityswap.eu?subject=Potenzialanalyse" method="get" enctype="text/plain" hidden>
+        <input type="hidden" name="Adresse">
+        <input type="hidden" name="PLZ">
+        <input type="hidden" name="Größe in m²">
+        <input type="hidden" name="Ausstattung">
+        <input type="hidden" name="Online-Schätzung">
+        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+        <label>E-Mail<input type="email" name="email" autocomplete="email" required></label>
+        <label>Telefon (freiwillig)<input type="tel" name="Telefon" autocomplete="tel"></label>
+        <input type="checkbox" name="botcheck" class="honig" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Genaue Schätzung anfordern</button>
+        <p class="klein-hinweis">Deine Angaben aus dem Rechner schicken wir mit. Wir nutzen sie nur für die Schätzung, siehe <a href="datenschutz.html">Datenschutz</a>.</p>
+      </form>
+      <p class="klein-hinweis" id="anfrage-hinweis">Erst links rechnen, dann erscheint hier das Formular. Lieber gleich sprechen? <a href="kontakt.html">Zum Kontakt</a></p>
+    </div>
+  </div>
+</div></div></section>
+
+<section class="abschnitt abschnitt-grau zentriert">
+  <div class="container">
+    <h2>Woher die Zahlen kommen</h2>
+    <div class="raster raster-3" style="text-align: left;">
+      <div class="kachel"><h3>Eigene Buchungen</h3><p>Grundlage sind die tatsächlichen Umsätze unserer Apartments in Wien und Berlin, nicht Werte aus fremden Marktberichten.</p></div>
+      <div class="kachel"><h3>Lage, Größe, Ausstattung</h3><p>Der Rechner unterscheidet zentrale und äußere Bezirke, rechnet nach Wohnfläche und passt den Wert an die Ausstattung an.</p></div>
+      <div class="kachel"><h3>Eine Spanne, kein Versprechen</h3><p>Online zeigen wir einen Richtwert. Die genaue Schätzung für deine Wohnung bekommst du schriftlich von uns.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="fuss">
+  <div class="container">
+    <div>
+      <a class="logo" href="index.html">
+        <img src="img/logo-512-96.webp" alt="" width="36" height="36" decoding="async">
+        hostbuddies
+      </a>
+      <p>Ein Service der Cityswap Austria GmbH (FN 611536 v, Handelsgericht Wien) und der CitySwap Germany GmbH, Berlin.</p>
+      <p>Linke Wienzeile 56, 1060 Wien<br>Urbanstraße 71, 10967 Berlin<br><a href="tel:+436763865149">+43 676 386 51 49</a></p>
+    </div>
+    <div>
+      <h4>Seiten</h4>
+      <ul>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="potenzialanalyse.html">Potenzialanalyse</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:hostbuddies@cityswap.eu">hostbuddies@cityswap.eu</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="widerruf.html">Vertrag widerrufen</a></li>
+      </ul>
+    </div>
+    <div class="klein">© 2026 Cityswap Austria GmbH. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="potenzial.js"></script>
+</body>
+</html>

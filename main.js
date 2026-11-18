@@ -30,17 +30,49 @@
   });
 })();
 
-// Preserve all fields when preparing an email; sending remains in the user's mail app.
+// Formulare: Mit einem Web3Forms-Schluessel gehen Anfragen direkt als E-Mail an uns.
+// Ohne Schluessel (leer) oeffnet das Formular wie bisher das Mailprogramm des Besuchers.
+var WEB3FORMS_KEY = "";
+
 document.querySelectorAll('form[action^="mailto:"]').forEach(function (form) {
   form.addEventListener('submit', function (event) {
     event.preventDefault();
     var target = new URL(form.action);
+    var subject = target.searchParams.get('subject') || 'Anfrage über Hostbuddies';
+    var felder = {};
     var lines = [];
     new FormData(form).forEach(function (value, key) {
-      if (String(value).trim()) lines.push(key + ': ' + value);
+      if (key === 'botcheck' || !String(value).trim()) return;
+      felder[key] = value;
+      lines.push(key + ': ' + value);
     });
-    var subject = target.searchParams.get('subject') || 'Anfrage über Hostbuddies';
-    window.location.href = target.protocol + target.pathname + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n\n'));
+    function mailprogramm() {
+      window.location.href = target.protocol + target.pathname + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n\n'));
+    }
+    if (!WEB3FORMS_KEY) { mailprogramm(); return; }
+    var honig = form.querySelector('[name="botcheck"]');
+    if (honig && honig.checked) return;
+    var knopf = form.querySelector('button[type="submit"]');
+    if (knopf) { knopf.disabled = true; knopf.textContent = 'Wird gesendet …'; }
+    felder.access_key = WEB3FORMS_KEY;
+    felder.subject = subject;
+    felder.from_name = 'hostbuddies.eu';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(felder)
+    }).then(function (antwort) { return antwort.json(); }).then(function (ergebnis) {
+      if (!ergebnis.success) throw new Error('nicht gesendet');
+      var danke = document.createElement('p');
+      danke.className = 'gesendet';
+      danke.setAttribute('role', 'status');
+      danke.textContent = 'Danke, deine Anfrage ist bei uns angekommen. Wir melden uns innerhalb von 48 Stunden.';
+      form.replaceWith(danke);
+    }).catch(function () {
+      // Versand gescheitert: Anfrage geht nicht verloren, sondern ins Mailprogramm.
+      if (knopf) { knopf.disabled = false; knopf.textContent = 'Noch einmal senden'; }
+      mailprogramm();
+    });
   });
 });
 document.addEventListener('keydown', function (event) {

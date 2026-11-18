@@ -658,3 +658,42 @@ main, section[id] { scroll-margin-top: 6rem; }
 @media (max-width: 860px) { .band-foto { background-image: var(--foto-mobil, var(--foto)); } }
 .formular input, .formular select, .formular textarea { font-size: 1rem; }
 .kopf .nav a.btn { color: #fff; }
+
+/* Formulare: Auswahlfelder, zweispaltige Zeilen, Ausstattungsstufen */
+.formular select {
+  display: block; width: 100%; margin-top: 0.35rem; padding: 0.65rem 0.8rem;
+  font: inherit; font-weight: 400; color: var(--text);
+  border: 1px solid #cfd6da; border-radius: 8px; background: var(--weiss);
+}
+.formular select:focus { outline: 2px solid var(--blau); outline-offset: 1px; border-color: var(--blau); }
+.formular .zweier { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+@media (max-width: 480px) { .formular .zweier { grid-template-columns: 1fr; } }
+.formular-teil { margin: 1.5rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid var(--linie); font-size: 1rem; color: #212121; }
+.formular .honig { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.formular .stufen { border: 0; margin: 0 0 1rem; padding: 0; }
+.formular .stufen legend { font-weight: 600; font-size: 0.9rem; color: #212121; padding: 0; margin-bottom: 0.4rem; }
+.formular .stufen label {
+  display: flex; align-items: flex-start; gap: 0.7rem; margin-bottom: 0.5rem;
+  padding: 0.7rem 0.9rem; border: 1px solid #cfd6da; border-radius: 8px; cursor: pointer; font-weight: 400;
+}
+.formular .stufen label:has(input:checked) { border-color: var(--blau); background: var(--hellblau); }
+.formular .stufen input { width: auto; margin: 0.3rem 0 0; accent-color: var(--blau); }
+.formular .stufen span { color: var(--text-hell); font-size: 0.9rem; }
+.formular .stufen strong { display: block; color: #212121; font-size: 0.95rem; }
+.gesendet { padding: 1rem 1.2rem; border-radius: 8px; background: var(--hellblau); color: #212121; font-weight: 600; margin: 0; }
+
+/* Potenzialanalyse: Ergebnis */
+.ergebnis { margin-bottom: 1.5rem; border-top: 4px solid var(--blau); }
+.ergebnis .kicker { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blau); margin-bottom: 0.4rem; }
+.ergebnis-zahl { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; color: var(--blau); margin: 0 0 0.3rem; white-space: nowrap; }
+.ergebnis-unter { color: #212121; font-weight: 600; margin-bottom: 0.8rem; }
+@media (max-width: 420px) { .ergebnis-zahl { white-space: normal; } }
+
+/* Kopfzeile: ein Menuepunkt mehr, deshalb auf mittleren Breiten enger setzen */
+.nav a { white-space: nowrap; }
+@media (min-width: 861px) and (max-width: 1150px) {
+  .nav { gap: 0.9rem; }
+  .nav a { font-size: 0.85rem; }
+  .nav .neu { display: none; }
+  .kopf .container { gap: 0.8rem; }
+}

@@ -14,7 +14,9 @@ Illustration, Kacheln, Petrolblau als Akzent). Ersetzt die bisherige Jimdo-Seite
 | `pricing.html` | Provision, Buchungsbeispiel, was inklusive ist |
 | `ueber-uns.html` | Wer hinter Hostbuddies steht |
 | `galerie.html` | Bildergalerie (derzeit Platzhalter) |
-| `kontakt.html` | E-Mail, WhatsApp, Kontaktformular |
+| `potenzialanalyse.html` | Rechner: PLZ, Größe, Ausstattung → Umsatzspanne, danach Anfrageformular |
+| `potenzial.js` | Zahlen und Rechenweg der Potenzialanalyse (alle Werte oben im Block `POTENZIAL`) |
+| `kontakt.html` | E-Mail, WhatsApp, Anfrageformular mit Angaben zur Wohnung |
 | `impressum.html`, `datenschutz.html`, `widerruf.html` | Rechtliches |
 | `style.css` | Gesamte Gestaltung, Farben oben unter `:root` |
 | `main.js` | Menü auf dem Handy, Markierung der aktuellen Seite |
@@ -93,3 +95,13 @@ HTTPS erzwingen, sobald GitHub das Zertifikat ausgestellt hat.
 
 Jimdo-Paket Grow kann gekündigt werden, sobald hostbuddies.eu die neue
 Seite zeigt.
+
+## Potenzialanalyse und Formularversand
+
+- **Zahlen:** stehen in `potenzial.js` ganz oben. Basiswerte aus Apaleo (eigene Apartments,
+  Juli bis Oktober 2026, Brutto-Buchungsumsatz inkl. Reinigung). Annahmen ohne Datenbasis:
+  typische m² je Wohnungstyp, Ausstattungsfaktoren (±15 %), Jahresfaktor 0,8, Randlage Berlin.
+  Sobald Apaleo ein volles Jahr enthält, Basiswerte und Jahresfaktor neu ziehen.
+- **Versand:** `main.js`, Zeile `WEB3FORMS_KEY`. Leer = Formular öffnet das Mailprogramm.
+  Mit Schlüssel von web3forms.com gehen Anfragen direkt als E-Mail raus; dann auch den
+  Absatz zum Formulardienst in `datenschutz.html` ergänzen.
