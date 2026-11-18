@@ -105,3 +105,4 @@ Seite zeigt.
 - **Versand:** `main.js`, Zeile `WEB3FORMS_KEY`. Leer = Formular öffnet das Mailprogramm.
   Mit Schlüssel von web3forms.com gehen Anfragen direkt als E-Mail raus; dann auch den
   Absatz zum Formulardienst in `datenschutz.html` ergänzen.
+- **`ertrag.html`:** frühere Anzeigen-Zielseite, leitet nur noch auf `potenzialanalyse.html` weiter (alte Links bleiben gültig).
